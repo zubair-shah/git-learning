@@ -1,22 +1,3 @@
-var count = 0;
-var interval;
-function timer(){
-    count++
-    console.log("count")
-}
-interval = setInterval(timer,1000)
-
-setTimeout(function(){
-    clearInterval(interval)
-},7000)
-
-function timeOut(){
-    console.log("runing")
-}
-setTimeout(timeOut,4000)
-
-
-
 
 var min =0;
 var sec =0;
@@ -36,7 +17,7 @@ function timer(){
         secHeading.innerHTML = sec;
         mili = 0;
     }
-else if (sec>=10){
+else if (sec>=60){
     min++
     minHeading.innerHTML = min;
     sec=0;
@@ -44,11 +25,15 @@ else if (sec>=10){
 
 } 
 function start(){
-
+var btn = document.getElementById("disable")
     interval = setInterval(timer, 10 )
+    btn.disabled = true
+    
 }
 function stop(){
+    var btn = document.getElementById("disable")
     clearInterval(interval)
+    btn.disabled = false
 }
 function reset(){
     mili = 0;
