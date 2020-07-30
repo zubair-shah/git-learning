@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <style>
-    body{text-align: center;
+    /* body{text-align: center;
+    background-size: cover;
         background-repeat: no-repeat;
         background-image: url(images/800px_COLOURBOX1739770.jpg);
-        display: inline-flex;
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-    }
+    } */
     h1{
         background-color: rgb(255, 255, 255);
         color: black;
@@ -31,10 +36,21 @@
     #main{
         padding-left: 400px;
     }
+    .container{
+        text-align: center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
 
 </style>
 </head>
 <body>
+    <div class="container">
+        <!-- Content here -->
+     
     <div id="main">
 <div>
     <h1 id="head">STOP WATCH FOR YOU</h1>
@@ -47,9 +63,10 @@
 
 
 <div>
-   <button onclick="start()" >start</button>
-   <button onclick="stop()">pause</button>
-   <button onclick="reset()">reset</button>
+     <button type="button" class="btn btn-success" onclick="start()" id="disable">start</button>
+  
+   <button type="button" class="btn btn-warning" onclick="stop()">Pause</button>
+   <button type="button" class="btn btn-danger" onclick="reset()">Reset</button>
 </div>
 
 
@@ -57,7 +74,7 @@
 </div>
 
 
-
+</div>
 
 
 
